@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": ">=5.5.9",
         "illuminate/contracts": "5.3.* || 5.4.*",
         "illuminate/support": "5.3.* || 5.4.*",
         "m4tthumphrey/php-gitlab-api": "^7.15"
