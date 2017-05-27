@@ -1,0 +1,36 @@
+{
+    "name": "rk90/gitlab",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Kerry",
+            "email": "rkerry1@gmail.com",
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/contracts": "5.3.* || 5.4.*",
+        "illuminate/support": "5.3.* || 5.4.*",
+        "m4tthumphrey/php-gitlab-api": "^7.15"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "ServiceMap\\Gitlab\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ServiceMap\\Tests\\Gitlab\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
