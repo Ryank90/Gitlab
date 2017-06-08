@@ -5,6 +5,7 @@ namespace ServiceMap\Gitlab;
 use Gitlab\Client;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Application as LaravelApplication;
+use Laravel\Lumen\Application as LumenApplication;
 use Illuminate\Support\ServiceProvider;
 
 class GitlabServiceProvider extends ServiceProvider
@@ -30,6 +31,8 @@ class GitlabServiceProvider extends ServiceProvider
 
     if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
       $this->publishes([$source => config_path('gitlab.php')]);
+    } elseif ($this->app instanceof LumenApplication) {
+      $this->app->configure('gitlab');
     }
 
     $this->mergeConfigFrom($source, 'gitlab');
